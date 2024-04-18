@@ -1,0 +1,6 @@
+@use "bulma/sass" with (
+    $primary: rgb(103, 59, 38),
+    $danger: #ff0000,
+    $success: #00ff00,
+    $warning: #b07a05,
+);
