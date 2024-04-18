@@ -22,18 +22,27 @@
 </script>
 
 <div class="card is-flex">
-    <p class="card-header-title">LOG IN</p>
-    <form on:submit|preventDefault={handleSubmit}>
-        <label>
-            Username:
-            <input class='input' type="text" bind:value={username} />
-        </label>
-        <label>
-            Password:
-            <input class='input' type="password" bind:value={password} />
-        </label>
-        <button class='button' type="submit">Submit</button>
-    </form>
-    
-    <p>{message}</p>
+    <div class="card-content">
+        <p class="title is-4">LOG IN</p>
+        <form on:submit|preventDefault={handleSubmit}>
+            <div class="field">
+                <label class="label">Username</label>
+                <div class="control">
+                    <input class="input" type="text" bind:value={username} placeholder="Enter your username">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label">Password</label>
+                <div class="control">
+                    <input class="input" type="password" bind:value={password} placeholder="Enter your password">
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" type="submit">Submit</button>
+                </div>
+            </div>
+        </form>
+        <p class="help is-danger">{message}</p>
+    </div>
 </div>
